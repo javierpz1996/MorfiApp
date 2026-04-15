@@ -1,22 +1,23 @@
 import "../global.css";
 
-import { DarkTheme, DefaultTheme, ThemeProvider } from "@react-navigation/native";
+import { FontProvider } from "@/components/font-provider";
+import { AuthProvider } from "@/contexts/auth-context";
+import { DeliveryLocationProvider } from "@/contexts/delivery-location-context";
 import { Slot } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import { View } from "react-native";
 import "react-native-reanimated";
 
-import { useColorScheme } from "@/hooks/use-color-scheme";
-
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
-
   return (
-    <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-      <View style={{ flex: 1 }}>
-        <Slot />
-      </View>
-      <StatusBar style="auto" />
-    </ThemeProvider>
+    <FontProvider>
+      <AuthProvider>
+        <DeliveryLocationProvider>
+          <>
+            <Slot />
+            <StatusBar style="auto" />
+          </>
+        </DeliveryLocationProvider>
+      </AuthProvider>
+    </FontProvider>
   );
 }
