@@ -176,14 +176,10 @@ export default function RegisterEmail() {
             showsVerticalScrollIndicator={false}
           >
             <View className="w-full max-w-md items-center self-center">
-              <Text className="w-full text-center text-2xl font-bold text-neutral-900">
-                Registrarte con tu correo
-              </Text>
-
-              <View className="mt-24 w-full items-center">
+              <View className="w-full items-center">
                 {step === 1 ? (
                   <>
-                    <Text className="mb-1 w-full text-sm font-medium text-neutral-700">
+                    <Text className="mb-1 w-full font-karla text-sm font-medium text-neutral-700">
                       Correo electrónico
                     </Text>
                     <View className="mb-4 w-full flex-row items-center justify-center gap-3">
@@ -192,10 +188,10 @@ export default function RegisterEmail() {
                         autoComplete="email"
                         autoCorrect={false}
                         keyboardType="email-address"
-                        className="min-w-0 flex-1 rounded-xl border border-orange-200 bg-white px-4 py-3 text-neutral-900"
+                        className="min-w-0 flex-1 rounded-xl bg-gray-100 px-6 py-5 text-neutral-900"
                         editable={!submitting}
                         onChangeText={setEmail}
-                        placeholder="tu@email.com"
+                        placeholder="Ingresa tu correo"
                         placeholderTextColor="#a3a3a3"
                         value={email}
                       />
@@ -210,13 +206,13 @@ export default function RegisterEmail() {
                       </Text>
                     </View>
 
-                    <Text className="mb-1 w-full text-sm font-medium text-neutral-700">
+                    <Text className="mb-1 w-full font-karla text-sm font-medium text-neutral-700">
                       Contraseña
                     </Text>
                     <TextInput
                       autoCapitalize="none"
                       autoComplete="new-password"
-                      className="mb-4 w-full rounded-xl border border-orange-200 bg-white px-4 py-3 text-neutral-900"
+                      className="mb-4 w-full rounded-xl bg-gray-100 px-6 py-5 text-neutral-900"
                       editable={!submitting}
                       onChangeText={setPassword}
                       placeholder="••••••••"
@@ -225,7 +221,7 @@ export default function RegisterEmail() {
                       value={password}
                     />
 
-                    <View className="mb-8 w-full gap-2">
+                    <View className="mb-8 w-full gap-0.5">
                       <View className="flex-row rounded-xl px-2">
                         <Text
                           className={
@@ -236,7 +232,7 @@ export default function RegisterEmail() {
                         >
                           {lengthOk ? "✓" : "✕"}
                         </Text>
-                        <Text className="text-sm text-neutral-800">
+                        <Text className="font-karla text-sm text-gray-500">
                           Mínimo 9 caracteres
                         </Text>
                       </View>
@@ -250,11 +246,11 @@ export default function RegisterEmail() {
                         >
                           {uppercaseOk ? "✓" : "✕"}
                         </Text>
-                        <Text className="text-sm text-neutral-800">
+                        <Text className="font-karla text-sm text-gray-500">
                           Mínimo 1 mayúscula
                         </Text>
                       </View>
-                      <View className="flex-row  rounded-xl px-2">
+                      <View className="flex-row rounded-xl px-2">
                         <Text
                           className={
                             numberOk
@@ -264,7 +260,7 @@ export default function RegisterEmail() {
                         >
                           {numberOk ? "✓" : "✕"}
                         </Text>
-                        <Text className="text-sm text-neutral-800">
+                        <Text className="font-karla text-sm text-gray-500">
                           Mínimo 1 número
                         </Text>
                       </View>

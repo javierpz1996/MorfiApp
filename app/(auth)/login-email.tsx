@@ -112,7 +112,7 @@ export default function LoginEmail() {
             <Text className="text-orange-700 underline">Volver</Text>
           </Pressable>
 
-          <Link href="/(auth)/register" asChild>
+          <Link href="/(auth)/register-email" asChild>
             <Pressable className="mt-6 items-center py-2">
               <Text className="text-orange-700 underline">
                 ¿No tienes cuenta? Regístrate

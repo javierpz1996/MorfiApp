@@ -27,6 +27,15 @@
     "plugins": [
       "expo-router",
       [
+        "expo-navigation-bar",
+        {
+          "backgroundColor": "#000000",
+          "barStyle": "light",
+          "visibility": "visible",
+          "position": "relative"
+        }
+      ],
+      [
         "expo-location",
         {
           "locationWhenInUsePermission": "MorfiApp usa tu ubicación para mostrarte tiendas y paquetes cercanos."
@@ -47,7 +56,7 @@
     ],
     "experiments": {
       "typedRoutes": true,
-      "reactCompiler": true
+      "reactCompiler": false
     }
   }
 }
